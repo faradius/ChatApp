@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "113162631014",
+    "project_id": "whatsappclone-88588",
+    "storage_bucket": "whatsappclone-88588.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113162631014:android:a1255ffd102fe7796e3aa7",
+        "android_client_info": {
+          "package_name": "com.alex.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113162631014-hkn9fo8jb3s6unffvqkisnksreojq39o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXDkojypwyIKc93_F3hEhsK7mLkXmqLMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113162631014-hkn9fo8jb3s6unffvqkisnksreojq39o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,23 +13,31 @@ public class AuthProvider {
 
     private FirebaseAuth mAuth;
 
-    public AuthProvider(){
+    public AuthProvider() {
         mAuth = FirebaseAuth.getInstance();
     }
 
-    public void sendCodeVerification(String phone, PhoneAuthProvider.OnVerificationStateChangedCallbacks callback){
+    public void sendCodeVerification(String phone, PhoneAuthProvider.OnVerificationStateChangedCallbacks callback) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-               phone,
-               60,
+                phone,
+                60,
                 TimeUnit.SECONDS,
                 TaskExecutors.MAIN_THREAD,
                 callback
         );
     }
 
-    public Task<AuthResult>signInPhone(String verificationId, String code){
+    public Task<AuthResult> signInPhone(String verificationId, String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
         return mAuth.signInWithCredential(credential);
+    }
+
+    public String getId() {
+        if (mAuth.getCurrentUser() != null) {
+            return mAuth.getCurrentUser().getUid();
+        } else {
+            return null;
+        }
     }
 
 }
